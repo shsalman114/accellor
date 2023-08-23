@@ -10,16 +10,14 @@ menuIcon.addEventListener("click", () => {
   }
 });
 
-function toggleElement(){
+function toggleElement() {
   const parnterButton = document.querySelector(".peoples-button").childNodes[1];
-  if(window.innerWidth < 768){
-    console.log(parnterButton.innerText  = 'Learn More');
-   } else{
-    console.log(parnterButton.innerText  = 'View Team');
-   }
+  if (window.innerWidth < 768) {
+    console.log((parnterButton.innerText = "Learn More"));
+  } else {
+    console.log((parnterButton.innerText = "View Team"));
+  }
 }
 
 window.addEventListener("resize", toggleElement);
-toggleElement(); 
-
-
+toggleElement();
