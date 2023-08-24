@@ -60,6 +60,7 @@ nav {
 
 .company-title a {
   font-size: 2.5em;
+  line-height: 125%;
 }
 
 .nav-menu ul {
@@ -68,6 +69,7 @@ nav {
   flex-wrap: wrap;
   list-style-type: none;
   font-size: 1.25em;
+  line-height: 125%;
   margin: 0px;
   padding: 0px;
 }
@@ -113,6 +115,7 @@ nav {
   color: #FFF;
   font-size: 1em;
   font-weight: 700;
+  line-height: 125%;
   letter-spacing: 5px;
   text-transform: uppercase;
 }
@@ -131,11 +134,13 @@ nav {
   font-family: "Crimson Text", sans-serif;
   font-size: 2.5em;
   font-weight: 700;
+  line-height: 125%;
 }
 
 .content {
   color: rgba(255, 255, 255, 0.75);
   font-size: 0.9375em;
+  line-height: 125%;
 }
 
 .button {
@@ -145,11 +150,13 @@ nav {
   font-family: "Work Sans";
   word-wrap: break-word;
   word-break: break-word;
+  line-height: 125%;
 }
 
 .explore-button {
   color: #000;
   font-size: 1.25em;
+  line-height: 125%;
   font-weight: 400;
   background: #FFF;
 }
@@ -305,12 +312,14 @@ nav {
   font-family: "Crimson Text", sans-serif;
   font-size: 1.5em;
   font-weight: 700;
+  line-height: 125%;
 }
 
 .section-five .partner-images .people .title .designation {
   color: rgba(33, 37, 41, 0.75);
   font-size: 0.975em;
   font-weight: 400;
+  line-height: 125%;
   width: 202px;
 }
 
@@ -416,10 +425,11 @@ footer {
 
   .company-title a {
     font-size: 1.875em;
+    line-height: 125%;
   }
 
   .logo>img {
-    width: 40px;
+    width: 45px;
     height: 31.5px;
   }
 

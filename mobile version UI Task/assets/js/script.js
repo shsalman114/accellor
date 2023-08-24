@@ -11,13 +11,12 @@ menuIcon.addEventListener("click", () => {
 });
 
 function toggleElement() {
-  const parnterButton = document.querySelector(".peoples-button").childNodes[1];
+  const parnterButton = document.querySelector(".peoples-button");
   if (window.innerWidth < 768) {
-    console.log((parnterButton.innerText = "Learn More"));
+    parnterButton.innerText = "Learn More";
   } else {
-    console.log((parnterButton.innerText = "View Team"));
+    parnterButton.innerText = "View Team";
   }
 }
-
 window.addEventListener("resize", toggleElement);
 toggleElement();
