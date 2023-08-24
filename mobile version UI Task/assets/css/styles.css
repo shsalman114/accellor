@@ -22,6 +22,10 @@ header {
   background: #74C69D;
 }
 
+h3{
+  margin: 0px;
+}
+
 .section-one {
   margin: 0px auto;
   width: 100%;
@@ -138,6 +142,7 @@ nav {
   padding: 13px 48px 10px 48px;
   border-radius: 5px;
   border: none;
+  font-family: "Work Sans";
   word-wrap: break-word;
   word-break: break-word;
 }
@@ -432,6 +437,14 @@ footer {
 
   .description-box {
     min-width: 335px;
+  }
+
+  .sb-description{
+    padding-bottom: 0px;
+  }
+
+  .sec-box{
+    padding-left: 0px;
   }
 
   .ds-image {
