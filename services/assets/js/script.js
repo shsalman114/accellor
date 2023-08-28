@@ -9,3 +9,5 @@ menuIcon.addEventListener("click", () => {
     menuBar.style.maxHeight = "0";
   }
 });
+
+
