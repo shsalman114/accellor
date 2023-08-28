@@ -9,14 +9,3 @@ menuIcon.addEventListener("click", () => {
     menuBar.style.maxHeight = "0";
   }
 });
-
-function toggleElement() {
-  const parnterButton = document.querySelector(".peoples-button");
-  if (window.innerWidth < 768) {
-    parnterButton.innerText = "Learn More";
-  } else {
-    parnterButton.innerText = "View Team";
-  }
-}
-window.addEventListener("resize", toggleElement);
-toggleElement();
