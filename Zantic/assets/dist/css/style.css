@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  margin: 16px auto;
+  padding: 0px 20px;
+}
+
+h1,
+p {
+  margin: 0px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile {
+  display: none;
+}
+
+.nav-menu.mobile {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.header-buttons {
+  gap: 16px;
+}
+.header-buttons .btn {
+  padding: 16px 24px;
+  border-radius: 8px;
+  background: #7c3aed;
+  color: #ffffff;
+  border: none;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  font-feature-settings: "liga" off;
+}
+.header-buttons .watch-btn {
+  padding: 16px 24px;
+}
+.header-buttons .watch-btn a {
+  display: flex;
+  gap: 8px;
+}
+.header-buttons .watch-btn span {
+  color: #7c3aed;
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+@media (max-width: 767px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 335px;
+  }
+  .mobile-menu-icon {
+    padding: 8px;
+  }
+  .nav-menu.mobile {
+    display: none;
+  }
+  .header-section {
+    width: 100%;
+    min-width: 335px;
+    display: inline-flex;
+    padding-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .header-section .header-content {
+    display: flex;
+    padding: 40px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .header-section .header-mobile {
+    width: 335px;
+  }
+  .header-content-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+  }
+  .header-content-description h1 {
+    color: #111827;
+    font-size: 2.25em;
+    font-weight: 700;
+    line-height: 125%; /* 125% */
+    letter-spacing: -0.9px;
+  }
+  .header-content-description p {
+    color: #374151;
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: 155.556%;
+  }
+  .client-section {
+    width: 375px;
+    padding: 16px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .client-section div {
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+}/*# sourceMappingURL=style.css.map */
