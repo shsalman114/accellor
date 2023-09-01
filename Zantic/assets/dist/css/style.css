@@ -8,6 +8,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
+  background-color: #ffffff;
 }
 
 header {
@@ -227,6 +228,10 @@ li {
   font-weight: 400;
   line-height: 28px; /* 155.556% */
 }
+.achievements-section .right-side .achieve-section .img.img {
+  padding: 8px;
+  gap: 10px;
+}
 
 footer {
   min-width: 375px;
@@ -342,6 +347,57 @@ footer {
   }
   .stories-section .story {
     width: 100%;
+  }
+  .achievements-section {
+    align-items: flex-start;
+    padding: 80px 40px;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .achievements-section .left-side {
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .achievements-section .left-side h1 {
+    color: #111827;
+    font-size: 2.25em;
+    font-weight: 700;
+    line-height: 125%; /* 125% */
+    letter-spacing: -0.9px;
+  }
+  .achievements-section .left-side p {
+    color: #111827;
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: 28px;
+  }
+  .achievements-section .right-side {
+    row-gap: 40px;
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .achievements-section .right-side .achieve-section {
+    gap: 16px;
+    justify-content: flex-start;
+    width: 328px;
+  }
+  .achievements-section .right-side .achieve-section div {
+    align-items: flex-start;
+  }
+  .achievements-section .right-side .achieve-section div h1 {
+    color: #111827;
+    font-size: 1.875em;
+    font-weight: 700;
+    line-height: 40px;
+  }
+  .achievements-section .right-side .achieve-section div p {
+    color: #111827;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 24px;
   }
 }
 @media (max-width: 767px) {
@@ -476,12 +532,13 @@ footer {
   .achievements-section .right-side {
     gap: 24px;
     width: 100%;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: flex-start;
   }
   .achievements-section .right-side .achieve-section {
     justify-content: flex-start;
-    width: 100%;
+    width: 50%;
     gap: 16px;
   }
   .achievements-section .right-side .achieve-section div {
