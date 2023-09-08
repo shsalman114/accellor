@@ -3,16 +3,94 @@
 }
 
 body {
+  overflow-x: hidden;
   margin: 0px;
   color: #000000;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   background-color: #ffffff;
-  overflow-x: hidden;
+  min-width: 375px;
+}
+body .background {
+  overflow-x: clip;
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0px auto;
+}
+body .background .bg-purple {
+  width: 100%;
+  max-width: 1440px;
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  justify-content: flex-end;
+}
+body .background .bg-purple .img {
+  width: 30%;
+  height: 406px;
+  min-width: 106px;
+  position: relative;
+  margin-top: -37px;
+  margin-left: 818px;
+}
+body .background .bg-purple .img .purple {
+  border-radius: 406px;
+  opacity: 0.6;
+  background: #7c3aed;
+  width: 100%;
+  height: 100%;
+  filter: blur(141px);
+}
+body .background .bg-left-one {
+  position: absolute;
+  z-index: -1;
+  top: 635px;
+  left: 0px;
+}
+body .background .bg-left-one svg {
+  width: 420px;
+}
+body .background .bg-left-one .bg-left-two {
+  position: relative;
+  z-index: -1;
+  top: -39px;
+  left: 0px;
+}
+body .background .bg-left-one .bg-left-two svg {
+  width: 268px;
+}
+body .background .bg-right-one {
+  position: absolute;
+  z-index: -1;
+  top: 448px;
+  right: 38px;
+}
+body .background .bg-right-one svg {
+  width: 420px;
+}
+body .background .bg-right-one .bg-right-two {
+  position: absolute;
+  z-index: -1;
+  top: 59px;
+  right: -38px;
+}
+body .background .bg-right-one .bg-right-two svg {
+  width: 612px;
+}
+body .background .bg-right-one .bg-right-two .bg-right-three {
+  position: absolute;
+  z-index: -1;
+  top: 33px;
+  right: 0px;
+}
+body .background .bg-right-one .bg-right-two .bg-right-three svg {
+  width: 180px;
 }
 
 header {
+  width: 100%;
   max-width: 1440px;
   position: relative;
   display: flex;
@@ -25,32 +103,6 @@ header .header-section {
   align-items: flex-start;
   gap: 32px;
   margin-top: 72px;
-}
-header .background {
-  position: absolute;
-  left: 10%;
-}
-header .background .bg-purple {
-  max-width: 1210px;
-  position: relative;
-  z-index: -1;
-  filter: blur(200px);
-  width: 406px;
-  height: 406px;
-  border-radius: 406px;
-  opacity: 0.6;
-  background: #7c3aed;
-  top: -34px;
-  left: 50vw;
-}
-header .background .bg-left-one {
-  position: relative;
-  z-index: -1;
-  fill: rgba(242, 247, 255, 0.7);
-  -webkit-backdrop-filter: blur(50px);
-          backdrop-filter: blur(50px);
-  top: 20%;
-  left: 0px;
 }
 
 nav.desktop {
@@ -163,10 +215,11 @@ li {
 
 .header-buttons {
   gap: 16px;
-  flex-wrap: wrap;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .header-buttons .btn {
+  flex: none;
   padding: 16px 24px;
   border-radius: 8px;
   background: #7c3aed;
@@ -513,7 +566,6 @@ li {
   width: 100%;
   max-width: 1440px;
   gap: 32px;
-  flex-wrap: wrap;
 }
 .summary-section > div .summary-left {
   align-items: flex-start;
@@ -637,9 +689,54 @@ li {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+  body .background .bg-left-one {
+    position: absolute;
+    z-index: -1;
+    top: 807px;
+    left: -127px;
+  }
+  body .background .bg-left-one svg {
+    width: 420px;
+  }
+  body .background .bg-left-one .bg-left-two {
+    position: relative;
+    z-index: -1;
+    top: -39px;
+    left: 0px;
+  }
+  body .background .bg-left-one .bg-left-two svg {
+    width: 268px;
+  }
+  body .background .bg-right-one {
+    position: absolute;
+    z-index: -1;
+    top: 569px;
+    right: 16px;
+  }
+  body .background .bg-right-one svg {
+    width: 420px;
+  }
+  body .background .bg-right-one .bg-right-two {
+    position: absolute;
+    z-index: -1;
+    top: 49px;
+    right: -113px;
+  }
+  body .background .bg-right-one .bg-right-two svg {
+    width: 612px;
+  }
+  body .background .bg-right-one .bg-right-two .bg-right-three {
+    position: absolute;
+    z-index: -1;
+    top: 33px;
+    right: 0px;
+  }
+  body .background .bg-right-one .bg-right-two .bg-right-three svg {
+    width: 180px;
+  }
   header {
-    margin: 20px auto 0px;
-    padding: 0px 40px;
+    margin: 0px auto;
+    padding: 20px 40px 0px;
   }
   nav.desktop {
     display: none;
@@ -910,9 +1007,11 @@ li {
   }
   .summary-section {
     padding: 80px 40px 0px 40px;
+    gap: 48px;
+  }
+  .summary-section > div {
     flex-direction: column;
     align-items: center;
-    gap: 48px;
   }
   .summary-section > div .summary-left {
     align-items: flex-start;
@@ -923,6 +1022,7 @@ li {
     align-items: flex-start;
     gap: 8px;
     align-self: stretch;
+    max-width: inherit;
   }
   .summary-section > div .summary-left .title h1 {
     color: #111827;
@@ -1026,10 +1126,55 @@ li {
   }
 }
 @media (max-width: 767px) {
+  body .background .bg-left-one {
+    position: absolute;
+    z-index: -1;
+    top: 807px;
+    left: -206px;
+  }
+  body .background .bg-left-one svg {
+    width: 420px;
+  }
+  body .background .bg-left-one .bg-left-two {
+    position: relative;
+    z-index: -1;
+    top: -39px;
+    left: 0px;
+  }
+  body .background .bg-left-one .bg-left-two svg {
+    width: 268px;
+  }
+  body .background .bg-right-one {
+    position: absolute;
+    z-index: -1;
+    top: 569px;
+    right: -368px;
+  }
+  body .background .bg-right-one svg {
+    width: 420px;
+  }
+  body .background .bg-right-one .bg-right-two {
+    position: absolute;
+    z-index: -1;
+    top: 59px;
+    right: -38px;
+  }
+  body .background .bg-right-one .bg-right-two svg {
+    width: 612px;
+  }
+  body .background .bg-right-one .bg-right-two .bg-right-three {
+    position: absolute;
+    z-index: -1;
+    top: 65px;
+    right: 266px;
+  }
+  body .background .bg-right-one .bg-right-two .bg-right-three svg {
+    width: 180px;
+  }
   header,
   .client-section {
-    margin: 16px auto;
-    padding: 0px 20px;
+    margin: 0px auto;
+    padding: 16px 20px;
   }
   header div.flex,
   .client-section div.flex {
@@ -1306,6 +1451,9 @@ li {
     flex-direction: column;
     gap: 32px;
   }
+  .summary-section > div {
+    flex-wrap: wrap;
+  }
   .summary-section > div .summary-left {
     align-items: flex-start;
     gap: 48px;
@@ -1417,8 +1565,19 @@ li {
     gap: 16px;
   }
 }
+@media (max-width: 1336px) {
+  .stories-section > div .story-one {
+    margin: 0px;
+  }
+  .stories-section > div .story-two {
+    margin: 0px;
+  }
+  .stories-section > div .story-three {
+    margin: 0px;
+  }
+}
 @media (min-width: 1023px) {
   .nav-menu-mobile {
     display: none;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */

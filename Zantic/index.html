@@ -9,16 +9,45 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./assets/dist/css/style.css">
+  <link rel="stylesheet" href="./assets/dist/css/main.css">
   <title>Zantic | HOME</title>
 </head>
 
 <body>
-  <header>
-    <div class="background">
-      <div class="bg-purple"></div>
-      .bg
+  <div class="background">
+    <div class="bg-purple">
+      <div class="img">
+        <div class="purple"></div>
+        <!-- <img src="./assets/images/bg-purple-circle.svg" alt=""> -->
+      </div>
     </div>
+    <div class="bg-left-one">
+      <svg xmlns="http://www.w3.org/2000/svg" width="420" height="118" viewBox="0 0 420 118" fill="none">
+        <path d="M0 53.0157L420 0.498779V64.4988L0 117.016V53.0157Z" fill="#75E3EA" />
+      </svg>
+      <div class="bg-left-two">
+        <svg viewBox="0 0 268 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M-152 53.0048L268 0.487793V64.4878L-152 117.005V53.0048Z" fill="#EDE9FE"/>
+          </svg>        
+      </div>
+    </div>
+    <div class="bg-right-one">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 117" fill="none">
+        <path d="M0 52.517L420 0V64L0 116.517V52.517Z" fill="#EDE9FE"/>
+      </svg>
+      <div class="bg-right-two">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 141" fill="none">
+          <path d="M0 76.8083L612 0V64L0 140.808V76.8083Z" fill="#C4B5FD"/>
+        </svg>
+        <div class="bg-right-three">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 118" fill="none">
+            <path d="M0 53.0048L420 0.487793V64.4878L0 117.005V53.0048Z" fill="#75E3EA"/>
+          </svg>
+        </div>
+      </div>
+    </div>    
+  </div>
+  <header>
     <nav class="flex mobile">
       <div class="logo">
         <img src="./assets/images/Logo.svg" alt="Logo">
@@ -77,8 +106,8 @@
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
         <div class="flex header-buttons">
-          <button class="flex btn">Get Started</button>
-          <div class="flex watch-btn">
+          <button class="btn">Get Started</button>
+          <div class="watch-btn">
             <a href="#"><img src="./assets/images/watch-icon.svg" alt="watch-icon"><span>Watch Video</span></a>
           </div>
         </div>
@@ -277,7 +306,7 @@
       </div>
     </div>
   </section>
-   <section class="flex-col integrations-section">
+  <section class="flex-col integrations-section">
     <div class="flex">
       <div class="flex-col integrations-content">
         <h1>Easy integrations with 170+ tools</h1>
@@ -288,20 +317,20 @@
           <img src="./assets/images/Vector.svg" alt="Vector">
         </div>
         <div class="flex-col integrations-logos">
-         <div class="flex row-1">
-          <div class="logo-div">
-            <img src="./assets/images/Logo-7.svg" alt="">
+          <div class="flex row-1">
+            <div class="logo-div">
+              <img src="./assets/images/Logo-7.svg" alt="">
+            </div>
+            <div class="logo-div">
+              <img src="./assets/images/logo-1.svg" alt="">
+            </div>
+            <div class="logo-div">
+              <img src="./assets/images/logo-2.svg" alt="">
+            </div>
+            <div class="logo-div">
+              <img src="./assets/images/logo-3.svg" alt="">
+            </div>
           </div>
-          <div class="logo-div">
-            <img src="./assets/images/logo-1.svg" alt="">
-          </div>
-          <div class="logo-div">
-            <img src="./assets/images/logo-2.svg" alt="">
-          </div>
-          <div class="logo-div">
-            <img src="./assets/images/logo-3.svg" alt="">
-          </div>
-         </div>
           <div class="flex row-2">
             <div class="logo-div">
               <img src="./assets/images/logo-4.svg" alt="">
@@ -317,7 +346,7 @@
       </div>
     </div>
   </section>
-   <section class="flex summary-section">
+  <section class="flex summary-section">
     <div class="flex">
       <div class="flex-col summary-left">
         <div class="flex-col title">
@@ -345,40 +374,40 @@
       </div>
     </div>
   </section>
-   <footer class="flex footer">
-      <div class="flex">
-        <div class="flex-col left">
-          <div class="logo">
-            <img src="./assets/images/Logo-md.svg" alt="logo">
+  <footer class="flex footer">
+    <div class="flex">
+      <div class="flex-col left">
+        <div class="logo">
+          <img src="./assets/images/Logo-md.svg" alt="logo">
+        </div>
+        <div class="flex-col downloads-menu">
+          <div class="downloads-list">
+            <ul class="flex">
+              <li>Download Now</li>
+              <li>License</li>
+            </ul>
           </div>
-          <div class="flex-col downloads-menu">
-            <div class="downloads-list">
-              <ul class="flex">
-                <li>Download Now</li>
-                <li>License</li>
-              </ul>
-            </div>
-            <div class="footer-menu">
-              <ul class="flex">
-                <li>About</li>
-                <li>Features</li>
-                <li>Pricing</li>
-                <li>News</li>
-                <li>Help</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-          </div>
-          <div class="copyright">
-            <p>&copy; 2021 All rights reserved</p>
+          <div class="footer-menu">
+            <ul class="flex">
+              <li>About</li>
+              <li>Features</li>
+              <li>Pricing</li>
+              <li>News</li>
+              <li>Help</li>
+              <li>Contact</li>
+            </ul>
           </div>
         </div>
-        <div class="flex-col right">
-          <h3>Get the App</h3>
-          <img src="./assets/images/play-store-badge.svg" alt="">
-          <img src="./assets/images/app-store-badge.svg" alt="">
+        <div class="copyright">
+          <p>&copy; 2021 All rights reserved</p>
         </div>
       </div>
+      <div class="flex-col right">
+        <h3>Get the App</h3>
+        <img src="./assets/images/play-store-badge.svg" alt="">
+        <img src="./assets/images/app-store-badge.svg" alt="">
+      </div>
+    </div>
   </footer>
   <script src="./assets/js/script.js"></script>
 </body>
