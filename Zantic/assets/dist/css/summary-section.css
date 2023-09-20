@@ -80,14 +80,14 @@
   color: #111827;
   font-size: 3em;
   font-weight: 700;
-  line-height: 60px; /* 125% */
+  line-height: 1.25;
   letter-spacing: -1.2px;
 }
 .summary-left .title p {
   color: #111827;
   font-size: 1.125em;
   font-weight: 400;
-  line-height: 28px; /* 155.556% */
+  line-height: 1.55;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .summary-left .title {
@@ -96,7 +96,7 @@
   }
   .summary-left .title h1 {
     font-size: 2.25em;
-    line-height: 125%;
+    line-height: 1.25;
     letter-spacing: -0.9px;
   }
 }
@@ -107,19 +107,19 @@
   }
   .summary-left .title h1 {
     font-size: 2.25em;
-    line-height: 125%;
+    line-height: 1.25;
     letter-spacing: -0.9px;
   }
 }
 @media screen and (min-width: 0) and (max-width: 575px) {
   .summary-left .title h1 {
     font-size: 1.875em;
-    line-height: 40px; /* 133.333% */
+    line-height: 1.33;
     letter-spacing: 0px;
   }
   .summary-left .title p {
     font-size: 1em;
-    line-height: 150%;
+    line-height: 1.5;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -145,7 +145,7 @@
   color: #111827;
   font-size: 1.125em;
   font-weight: 500;
-  line-height: 28px; /* 155.556% */
+  line-height: 1.55;
 }
 .title-buttons .store-buttons {
   display: flex;

@@ -69,14 +69,14 @@
   color: #111827;
   font-size: 3em;
   font-weight: 700;
-  line-height: 3.75em; /* 125% */
+  line-height: 1.25;
   letter-spacing: -1.2px;
 }
 .integrations-content p {
   color: #111827;
   font-size: 1.125em;
   font-weight: 400;
-  line-height: 1.75em; /* 155.556% */
+  line-height: 1.55;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .integrations-content {
@@ -105,11 +105,11 @@
   }
   .integrations-content h1 {
     font-size: 1.875em;
-    line-height: 2.5em;
+    line-height: 1.33;
   }
   .integrations-content p {
     font-size: 1.125em;
-    line-height: 1.75em;
+    line-height: 1.55;
   }
 }
 

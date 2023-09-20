@@ -37,14 +37,14 @@
     color: $neutral-900;
     font-size: 3em;
     font-weight: 700;
-    line-height: 125%;
+    line-height: 1.25;
     letter-spacing: -1.2px;
   }
   p {
     color: $neutral-900;
     font-size: 1.125em;
     font-weight: 400;
-    line-height: 28px; /* 155.556% */
+    line-height: 1.55; 
   }
 
   @include media-lg {
@@ -122,7 +122,7 @@
     color: $neutral-900;
     font-size: 2.25em;
     font-weight: 700;
-    line-height: 125%;
+    line-height: 1.25;
     letter-spacing: -0.9px;
   }
 
@@ -130,32 +130,32 @@
     color: $neutral-900;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%;
+    line-height: 1.5;
   }
 
   @include media-lg {
     h1 {
       font-size: 1.875em;
-      line-height: 40px;
+      line-height: 1.33;
     }
   }
 
   @include media-md {
     h1 {
       font-size: 1.875em;
-      line-height: 40px;
+      line-height: 1.33;
     }
   }
 
   @include media-sm {
     h1 {
       font-size: 1.5em;
-      line-height: 32px;
+      line-height: 1.33;
     }
 
     p {
       font-size: 0.875em;
-      line-height: 20px;
+      line-height: 1.42;
     }
   }
 }

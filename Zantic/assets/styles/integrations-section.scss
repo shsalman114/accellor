@@ -52,7 +52,7 @@
     color: $neutral-900;
     font-size: 3em;
     font-weight: 700;
-    line-height: 3.75em; /* 125% */
+    line-height: 1.25;
     letter-spacing: -1.2px;
   }
 
@@ -60,7 +60,7 @@
     color: $neutral-900;
     font-size: 1.125em;
     font-weight: 400;
-    line-height: 1.75em; /* 155.556% */
+    line-height: 1.55;
   }
 
   @include media-lg {
@@ -89,12 +89,12 @@
 
     h1 {
       font-size: 1.875em;
-      line-height: 2.5em; //40
+      line-height: 1.33;
     }
 
     p {
       font-size: 1.125em;
-      line-height: 1.75em; //28
+      line-height: 1.55;
     }
   }
 }
