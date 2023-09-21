@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "./variables";
 @import "./mixins";
 
@@ -16,7 +17,7 @@
   height: 752px;
   transform-origin: left bottom;
   transform: skew(0, -7.13deg);
-  background: rgba(242, 247, 255, 0.7);
+  background: $backgroundCoverColor;
   @include media-xl{
     height: 955px;
   }
@@ -25,7 +26,7 @@
 .bg-left-one {
   @include position(absolute, -1);
   bottom: 0px;
-  width: 30%;
+  width: math.div(100vw,3.33);
   height: 65px;
   background: $secondary-300;
 }
@@ -40,7 +41,7 @@
 
 .bg-right-one {
   @include position(absolute, -1);
-  width: 42.5%;
+  width: math.div(100vw,2.24);
   height: 65px;
   background: $primary-300;
   bottom: 0px;

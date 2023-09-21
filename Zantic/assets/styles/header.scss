@@ -7,7 +7,7 @@ header {
   min-width: $minWidth;
 }
 
-.header-div{
+.header-div {
   @include flex(center, center, 0px, column, nowrap);
   width: 100%;
   max-width: $maxWidth;
@@ -43,10 +43,9 @@ header {
   }
 
   @include custom-media-up($maxWidth) {
-      overflow: hidden;
+    overflow: hidden;
   }
 }
-
 
 .mobile-menu-icon {
   @include flex(center, center, 0px, row, nowrap);
@@ -106,7 +105,7 @@ nav.desktop {
   @include flex(flex-start, center, 32px, row, nowrap);
   margin-top: 72px;
 
-  @include media-xl{
+  @include media-xl {
     flex-wrap: wrap;
   }
 
@@ -129,7 +128,6 @@ nav.desktop {
     padding-bottom: 10px;
     margin-top: 0px;
   }
-
 }
 
 .header-content {

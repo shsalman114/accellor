@@ -27,7 +27,7 @@
   position: absolute;
   z-index: -1;
   bottom: 0px;
-  width: 30%;
+  width: 30.03003003vw;
   height: 65px;
   background: #75e3ea;
 }
@@ -44,7 +44,7 @@
 .bg-right-one {
   position: absolute;
   z-index: -1;
-  width: 42.5%;
+  width: 44.6428571429vw;
   height: 65px;
   background: #c4b5fd;
   bottom: 0px;
