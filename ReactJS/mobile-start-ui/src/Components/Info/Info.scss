@@ -1,0 +1,30 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+
+.section-four {
+  @include flex(center, space-between, 0px, row-reverse, nowrap);
+}
+
+.section-four {
+  img {
+    max-width: 600px;
+  }
+}
+
+.sec-box {
+  @include flex(flex-start, space-between, 16px, column, nowrap);
+  width: 100%;
+  padding-left: 20px;
+  max-width: 470px;
+}
+
+.sb-title {
+  color: $color-dark;
+}
+
+.sb-description {
+  color: $color-dark-50;
+  font-size: 0.9375em;
+  padding-bottom: 20px;
+}

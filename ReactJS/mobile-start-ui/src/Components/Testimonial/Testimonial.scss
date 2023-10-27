@@ -1,0 +1,33 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.section-five {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+  width: 100%;
+  max-width: 1176px;
+  margin: 102.27px auto;
+  margin-bottom: 0px;
+}
+
+.button {
+  padding: 13px 48px 10px 48px;
+  border-radius: 5px;
+  border: none;
+  font-family: "Work Sans";
+  word-wrap: break-word;
+  word-break: break-word;
+  line-height: 125%;
+}
+
+.people-button {
+  background: $color-dark;
+  color: $color-white;
+  text-align: center;
+  font-size: 1.25em;
+  padding: 13px 29.5px 10px 29.5px;
+  font-weight: 400;
+  font-style: normal;
+}

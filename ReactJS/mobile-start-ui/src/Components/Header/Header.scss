@@ -1,0 +1,79 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+header {
+  background: #74C69D;
+}
+
+.description {
+  @include flex(center, space-between, 0px, row-reverse, nowrap);
+  padding-bottom: 82.87px;
+  padding: 0 0 82.87px;
+}
+
+.description {
+  img{
+    max-width: 644px;
+  }
+}
+
+
+.description-box {
+  @include flex(flex-start, center, 25px, column, nowrap);
+  width: 100%;
+  max-width: 416px;
+}
+
+.desc-inner-box {
+  @include flex(flex-start, center, 15px, column, nowrap);
+}
+
+.heading {
+  color: $color-white;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.heading,
+.sub-heading,
+.content {
+  word-break: break-word;
+}
+
+.sub-heading {
+  color: $color-white;
+}
+
+.sub-heading {
+  font-family: "Crimson Text", sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.content {
+  color: $color-white-75;
+  font-size: 0.9375em;
+  line-height: 125%;
+}
+
+.button {
+  padding: 13px 48px 10px 48px;
+  border-radius: 5px;
+  border: none;
+  font-family: "Work Sans";
+  word-wrap: break-word;
+  word-break: break-word;
+  line-height: 125%;
+}
+
+.explore-button {
+  color: $color-black;
+  font-size: 1.25em;
+  line-height: 125%;
+  font-weight: 400;
+  background: $color-white;
+}

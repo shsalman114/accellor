@@ -1,0 +1,28 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+footer {
+  @include flex(center, center, 0px, row, nowrap);
+  background-color: #74C69D;
+}
+
+.footer-section {
+  display: flex;
+  width: 1178px;
+  height: 25px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-section>p {
+  color: #FFF;
+  font-size: 1.25em;
+  font-weight: 400;
+}
