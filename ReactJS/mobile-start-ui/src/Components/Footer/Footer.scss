@@ -4,6 +4,8 @@
 footer {
   @include flex(center, center, 0px, row, nowrap);
   background-color: #74C69D;
+  height: 125px;
+  margin-top: 54px;
 }
 
 .footer-section {
@@ -21,8 +23,10 @@ footer {
   gap: 20px;
 }
 
-.footer-section>p {
-  color: #FFF;
-  font-size: 1.25em;
-  font-weight: 400;
+.footer-section {
+  p {
+    color: #FFF;
+    font-size: 1.25em;
+    font-weight: 400;
+  }
 }

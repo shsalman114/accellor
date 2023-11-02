@@ -1,14 +1,13 @@
 import React from "react";
 import Button from "../Button/Button";
-import image from '../../assets/images/section-three-image.svg';
-import './Features.scss';
+import image from "../../assets/images/section-three-image.svg";
+import "./Features.scss";
 
 const Features = () => {
   return (
     <section className="wrapper">
       <div className="section-three features">
-        
-          <img src={image} alt="section-three" />
+        <img src={image} alt="section-three" />
         <div className="sec-box">
           <p className="sub-heading sb-title">
             Lorem ipsum dolor sit amet consectetur

@@ -1,6 +1,5 @@
 
-// COLORS
-
+// colors
 $color-black: #000;
 $color-dark: #212529;
 $color-white: #ffffff;
@@ -9,7 +8,18 @@ $color-dark-50: rgba($color-dark, 0.5); // #21252980
 $color-dark-75: rgba($color-dark, 0.75); //#212529BF
 $color-white-75: rgba($color-white, 0.75); //#FFFFFFBF
 
-// DIMENSION
-
+// dimension
 $widthMax: 1180px;
+
+// media aliases and breakpoints
+$screen-sm-min: 0;
+$screen-md-min: 576px;
+$screen-lg-min: 768px;
+$screen-xl-min: 1024px;
+$screen-xxl-min: 1361px;
+
+$screen-sm-max: 575px;
+$screen-md-max: 767px;
+$screen-lg-max: 1023px;
+$screen-xl-max: 1360px;
 

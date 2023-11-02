@@ -1,7 +1,7 @@
 @import '../../assets/styles/variables';
 @import '../../assets/styles/mixins';
 
-.section-two {
+.section-two  {
   @include flex(center, center, 55px, column, nowrap);
   margin-top: 60px;
 }

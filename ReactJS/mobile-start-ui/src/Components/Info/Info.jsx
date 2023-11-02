@@ -6,7 +6,7 @@ import Button from "../Button/Button";
 const Info = () => {
   return (
     <section className="wrapper">
-      <div className="section-four">
+      <div className="section-four info">
         <img src={image} alt="section-four" />
         <div className="sec-box">
           <p className="sub-heading sb-title">

@@ -3,47 +3,45 @@
 
 .section-three {
   @include flex(center, space-between, 0px, row, nowrap);
-}
+  margin-top: 73px;
 
-.section-three {
   img {
     max-width: 600px;
   }
-}
 
-.sec-box {
-  @include flex(flex-start, space-between, 16px, column, nowrap);
-  width: 100%;
-  padding-left: 20px;
-  max-width: 470px;
-}
+  .sec-box {
+    @include flex(flex-start, space-between, 16px, column, nowrap);
+    width: 100%;
+    padding-left: 20px;
+    max-width: 470px;
+  }
 
-.sb-title {
-  color: $color-dark;
-}
+  .sb-title {
+    color: $color-dark;
+  }
 
-.sb-description {
-  color: $color-dark-50;
-  font-size: 0.9375em;
-  padding-bottom: 20px;
-}
+  .sb-description {
+    color: $color-dark-50;
+    font-size: 0.9375em;
+    padding-bottom: 20px;
+  }
 
-.button {
-  padding: 13px 48px 10px 48px;
-  border-radius: 5px;
-  border: none;
-  font-family: "Work Sans";
-  word-wrap: break-word;
-  word-break: break-word;
-  line-height: 125%;
-}
-
-.partners-button {
-  background: $color-dark;
-  color: $color-white;
-  text-align: center;
-  font-size: 1.25em;
-  padding: 13px 29.5px 10px 29.5px;
-  font-weight: 400;
-  font-style: normal;
+  .button {
+    padding: 13px 48px 10px 48px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Work Sans";
+    word-wrap: break-word;
+    word-break: break-word;
+    line-height: 125%;
+  }
+  .partners-button {
+    background: $color-dark;
+    color: $color-white;
+    text-align: center;
+    font-size: 1.25em;
+    padding: 13px 29.5px 10px 29.5px;
+    font-weight: 400;
+    font-style: normal;
+  }
 }

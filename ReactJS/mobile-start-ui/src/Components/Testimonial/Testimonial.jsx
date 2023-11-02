@@ -9,7 +9,7 @@ import "./Testimonial.scss";
 
 const Testimonial = () => {
   return (
-    <section className="section-five">
+    <section className="section-five testimonial">
       <div className="partners-box">
         <p className="heading pb-title">TEAM</p>
         <p className="sub-heading pb-subtitle">Our Talents</p>

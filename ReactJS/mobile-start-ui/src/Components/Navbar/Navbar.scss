@@ -11,31 +11,73 @@ nav {
   @include flex(center, center, 18px, row, nowrap);
 }
 
-.logo{
+.logo {
   img {
     width: 70px;
     height: 48px;
   }
 }
 
-.company-title{
-    font-size: 2.5em;
-    line-height: 125%;
+.company-title {
+  font-size: 2.5em;
+  line-height: 125%;
 }
 
-.nav-menu{
-   ul {
-  @include flex(center, center,  30px, row, wrap);
-    list-style-type: none;
-    font-size: 1.25em;
-    line-height: 125%;
-    margin: 0px;
-    padding: 0px;
+.nav-menu {
+  @include flex(center, center, 30px, row, wrap);
+  list-style-type: none;
+  font-size: 1.25em;
+  line-height: 125%;
+  margin: 0px;
+  padding: 0px;
+
+  @include lg() {
+    display: none;
   }
+
+  @include md() {
+    display: none;
+  }
+
+  @include sm() {
+    display: none;
+  }
+
 }
 
 .title-div {
   display: flex;
   align-items: center;
   gap: 18px;
+}
+
+.nav-menu-btn {
+  background-color: initial;
+  border: none;
+  display: none;
+
+  @include lg() {
+    display: block;
+  }
+
+  @include md() {
+    display: block;
+  }
+
+  @include sm() {
+    display: block;
+  }
+}
+
+.active {
+  @include flex(center, center, 0px, column, nowrap);
+  position: absolute;
+  background: #f4f4f4;
+  width: 50vw;
+  top: 40px;
+
+  li {
+    padding: 10px;
+    border-bottom: 1px solid #0f0f0f;
+  }
 }

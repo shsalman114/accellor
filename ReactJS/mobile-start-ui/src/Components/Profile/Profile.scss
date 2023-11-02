@@ -1,16 +1,7 @@
 @import "../../assets/styles/variables";
 @import "../../assets/styles/mixins";
 
-.section-five .partner-images .people .photo svg {
-  border: 1px solid black;
-  border-radius: 50%;
-}
-
-.section-five .partner-images {
-  gap: 47px;
-}
-
-.section-five .partner-images .people {
+.people {
   display: inline-flex;
   flex-direction: column;
   gap: 19px;
@@ -18,35 +9,36 @@
   background: #FFF;
   box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.25);
   padding: 20px 25px 19px 25px;
-}
 
-.section-five .partner-images .people .people-frame {
-  text-align: center;
-}
+  .people-frame {
+    text-align: center;
 
-.section-five .partner-images .people .title {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 17px;
-}
+    img {
+      border: 1px #000 solid;
+      border-radius: 50%;
+    }
+  }
 
-.section-five .partner-images .people .title .name {
-  color: #212529;
-  font-family: "Crimson Text", sans-serif;
-  font-size: 1.5em;
-  font-weight: 700;
-  line-height: 125%;
-}
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
 
-.section-five .partner-images .people .title .designation {
-  color: rgba(33, 37, 41, 0.75);
-  font-size: 0.975em;
-  font-weight: 400;
-  line-height: 125%;
-  width: 202px;
-}
+    .name {
+      color: #212529;
+      font-family: "Crimson Text", sans-serif;
+      font-size: 1.5em;
+      font-weight: 700;
+      line-height: 125%;
+    }
 
-.section-five .peoples-button {
-  padding: 13px 29.5px 10px 29.5px;
+    .designation {
+      color: rgba(33, 37, 41, 0.75);
+      font-size: 0.975em;
+      font-weight: 400;
+      line-height: 125%;
+      width: 202px;
+    }
+  }
 }

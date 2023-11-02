@@ -10,7 +10,7 @@ import "./Clients.scss";
 const Clients = () => {
   return (
     <section className="wrapper">
-      <div className="section-two">
+      <div className="section-two clients">
         <div className="partners-box">
           <p className="heading pb-title">PARTNERS</p>
           <p className="sub-heading pb-subtitle">Lorem Ipsum Dolor</p>
