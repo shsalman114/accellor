@@ -8,26 +8,79 @@
   gap: 45px;
   width: 100%;
   max-width: 1176px;
-  margin: 102.27px auto;
+  margin-top: 102.27px;
   margin-bottom: 0px;
-}
 
-.button {
-  padding: 13px 48px 10px 48px;
-  border-radius: 5px;
-  border: none;
-  font-family: "Work Sans";
-  word-wrap: break-word;
-  word-break: break-word;
-  line-height: 125%;
-}
+  @include md() {
+    margin-top: 40px;
+  }
 
-.people-button {
-  background: $color-dark;
-  color: $color-white;
-  text-align: center;
-  font-size: 1.25em;
-  padding: 13px 29.5px 10px 29.5px;
-  font-weight: 400;
-  font-style: normal;
+  @include sm() {
+    margin-top: 40px;
+  }
+
+  .pb-title,
+  .pb-subtitle,
+  .pb-description {
+    word-break: break-word;
+  }
+
+  .pb-title {
+    color: $color-green-100;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 125%;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+
+  .pb-subtitle {
+    color: $color-black;
+    text-align: center;
+    font-family: "Crimson Text", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 125%;
+
+    @include md() {
+      font-size: 1.75rem;
+    }
+
+    @include sm() {
+      font-size: 1.75rem;
+    }
+  }
+
+  .pb-description {
+    color: $color-black;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 125%;
+  }
+
+  .partner-images {
+    @include flex(center, center, 47px, row, wrap)
+  }
+
+  .button {
+    padding: 13px 48px 10px 48px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Work Sans";
+    word-wrap: break-word;
+    word-break: break-word;
+    line-height: 125%;
+  }
+
+  .people-button {
+    background: $color-dark;
+    color: $color-white;
+    text-align: center;
+    font-size: 1.25em;
+    padding: 13px 29.5px 10px 29.5px;
+    font-weight: 400;
+    font-style: normal;
+  }
 }

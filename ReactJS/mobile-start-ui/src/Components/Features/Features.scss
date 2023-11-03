@@ -5,6 +5,20 @@
   @include flex(center, space-between, 0px, row, nowrap);
   margin-top: 73px;
 
+  @include md() {
+    flex-wrap: wrap;
+    margin-top: 60px;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  @include sm() {
+    flex-wrap: wrap;
+    margin-top: 60px;
+    justify-content: center;
+    gap: 30px;
+  }
+
   img {
     max-width: 600px;
   }
@@ -14,16 +28,41 @@
     width: 100%;
     padding-left: 20px;
     max-width: 470px;
+
+    @include md() {
+      padding-left: 0;
+      max-width: 100%;
+    }
+
+    @include sm() {
+      padding-left: 0;
+      max-width: 100%;
+    }
   }
 
   .sb-title {
     color: $color-dark;
+    font-family: Crimson Text;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 125%;
+
+    @include md() {
+      font-size: 1.5rem;
+
+    }
+
+    @include sm() {
+      font-size: 1.5rem;
+    }
   }
 
   .sb-description {
     color: $color-dark-50;
-    font-size: 0.9375em;
+    font-size: 0.9375rem;
     padding-bottom: 20px;
+    line-height: 125%;
+    /* 18.75px */
   }
 
   .button {
@@ -35,11 +74,12 @@
     word-break: break-word;
     line-height: 125%;
   }
+
   .partners-button {
     background: $color-dark;
     color: $color-white;
     text-align: center;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     padding: 13px 29.5px 10px 29.5px;
     font-weight: 400;
     font-style: normal;

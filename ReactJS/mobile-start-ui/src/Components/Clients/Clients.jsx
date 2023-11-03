@@ -4,17 +4,17 @@ import pImg2 from "../../assets/images/partner2.svg";
 import pImg3 from "../../assets/images/partner3.svg";
 import pImg4 from "../../assets/images/partner4.svg";
 import pImg5 from "../../assets/images/partner5.svg";
-import Button from '../Button/Button';
+import Button from "../Button/Button";
 import "./Clients.scss";
 
 const Clients = () => {
   return (
     <section className="wrapper">
-      <div className="section-two clients">
+      <div id="clients" className="section-two">
         <div className="partners-box">
-          <p className="heading pb-title">PARTNERS</p>
-          <p className="sub-heading pb-subtitle">Lorem Ipsum Dolor</p>
-          <p className="content pb-description">
+          <p className="pb-title">PARTNERS</p>
+          <p className="pb-subtitle">Lorem Ipsum Dolor</p>
+          <p className="pb-description">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
@@ -25,9 +25,7 @@ const Clients = () => {
           <img src={pImg4} alt="partners" />
           <img src={pImg5} alt="partners" />
         </div>
-        <Button className={'button partners-button'}>
-          Learn More
-        </Button>
+        <Button className={"button partners-button"}>Learn More</Button>
       </div>
     </section>
   );

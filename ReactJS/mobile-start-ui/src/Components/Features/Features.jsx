@@ -6,13 +6,13 @@ import "./Features.scss";
 const Features = () => {
   return (
     <section className="wrapper">
-      <div className="section-three features">
-        <img src={image} alt="section-three" />
+      <div id="info" className="section-three">
+        <div>
+          <img src={image} alt="section-three" />
+        </div>
         <div className="sec-box">
-          <p className="sub-heading sb-title">
-            Lorem ipsum dolor sit amet consectetur
-          </p>
-          <p className="content sb-description">
+          <p className="sb-title">Lorem ipsum dolor sit amet consectetur</p>
+          <p className="sb-description">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
             nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum,
             voluptate culpa nesciunt delectus iste?

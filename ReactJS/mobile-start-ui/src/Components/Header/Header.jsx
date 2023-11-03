@@ -1,16 +1,18 @@
 import React from "react";
-import Button from '../Button/Button';
+import Button from "../Button/Button";
 import Navbar from "../Navbar/Navbar";
 import groupImage from "../../assets/images/Group.png";
 import "./Header.scss";
 
 const Header = () => {
   return (
-    <header>
+    <header id="home">
       <div className="wrapper">
         <Navbar />
         <div className="description">
+          <div className="description-image">
             <img src={groupImage} alt="collaboration" />
+          </div>
           <div className="description-box">
             <div className="desc-inner-box">
               <p className="heading">WELCOME</p>
@@ -23,10 +25,7 @@ const Header = () => {
                 error ipsum, voluptate culpa nesciunt delectus iste?
               </p>
             </div>
-            <Button className={'button explore-button'}>
-              Explore
-            </Button>
-
+            <Button className={"button explore-button"}>Explore</Button>
           </div>
         </div>
       </div>

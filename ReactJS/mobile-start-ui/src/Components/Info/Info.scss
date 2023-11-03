@@ -5,6 +5,20 @@
   @include flex(center, space-between, 0px, row-reverse, nowrap);
   margin-top: 73px;
 
+  @include md() {
+    flex-wrap: wrap;
+    margin-top: 60px;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  @include sm() {
+    flex-wrap: wrap;
+    margin-top: 60px;
+    justify-content: center;
+    gap: 30px;
+  }
+
   img {
     max-width: 600px;
   }
@@ -14,10 +28,53 @@
     width: 100%;
     padding-left: 20px;
     max-width: 470px;
+
+    @include md() {
+      padding-left: 0;
+      max-width: 100%;
+    }
+
+    @include sm() {
+      padding-left: 0;
+      max-width: 100%;
+    }
   }
 
   .sb-title {
     color: $color-dark;
+    font-family: Crimson Text;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 125%;
+
+    @include md() {
+      font-size: 1.5rem;
+
+    }
+
+    @include sm() {
+      font-size: 1.5rem;
+    }
+  }
+
+  .button {
+    padding: 13px 48px 10px 48px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Work Sans";
+    word-wrap: break-word;
+    word-break: break-word;
+    line-height: 125%;
+  }
+
+  .partners-button {
+    background: #212529;
+    color: #FFF;
+    text-align: center;
+    font-size: 1.25em;
+    padding: 13px 29.5px 10px 29.5px;
+    font-weight: 400;
+    font-style: normal;
   }
 
   .sb-description {
