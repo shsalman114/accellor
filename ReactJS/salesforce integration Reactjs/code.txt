@@ -1,8 +1,8 @@
 ///====================================.env
 loginUrl='https://platform-enterprise-9548-dev-ed.scratch.my.salesforce.com'
 callbackUrl='http://localhost:8080/auth/callback'
-consumerKey='3MVG9WiZ4_mwZLgcZpL8YyJN5RUWeEPu_zHZnD4hyrSf0sHEWB7gqKdW1o8piXkaqhgPRrv9qQbN1JhxJMuu8'
-consumerSecret='97067CB86176CEB54B0D6A34CFB1B7C4DC1961A61EA75B86A14E22620D0CDAEB'
+consumerKey=''
+consumerSecret=''
 apiVersion='53.0'
 
 isHttps='false'
