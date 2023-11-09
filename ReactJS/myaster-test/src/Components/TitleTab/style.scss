@@ -1,0 +1,21 @@
+@import "../../assets/sass/mixins";
+
+.title-div {
+  @include flex(flex-start, center, 10px, column, nowrap);
+  padding: 4px 10px 4px 6px;
+}
+
+.title {
+  @include flex(center, center, 4px, row, nowrap);
+  color: #78909C;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+}
+
+.title-dropdown-icon {
+  height: 16px;
+}

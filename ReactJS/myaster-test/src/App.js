@@ -1,8 +1,10 @@
 import './App.css';
-
+import SideContent from './Pages/SideContent';
 function App() {
   return (
-   <div></div>
+   <>
+    <SideContent/>
+   </>
   );
 }
 

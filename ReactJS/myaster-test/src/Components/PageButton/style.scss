@@ -1,0 +1,24 @@
+@import "../../assets/sass/mixins";
+
+.page-button {
+  @include flex(center, flex-start, 10px, row, nowrap);
+  width: 230px;
+  padding: 10px 20px 10px 15px;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &.active {
+    border-radius: 10px;
+    background: #144D92;
+  }
+
+  span {
+    color: #144D92;
+    font-family: Mulish;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
