@@ -1,5 +1,5 @@
 import './App.css';
-import SideContent from './Pages/SideContent';
+import SideContent from './Pages/SideContent/Index';
 function App() {
   return (
    <>

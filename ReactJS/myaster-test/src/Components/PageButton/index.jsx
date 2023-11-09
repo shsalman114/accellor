@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
-import homeIcon from '../../assets/images/homeIcon.svg'
+
 import './style.scss'
-const index = () => {
+
+const Index = (props) => {
 
   const [isActive, setIsActive] = useState(false);
-  const btnClass = 'page-button';
+
+  let btnClass = isActive ? 'page-button active' : 'page-button';
   return (
-    <button className={btnClass} onClick={() => setIsActive({})}>
-      <img src={homeIcon} alt="icon" />
-      <span>Homepages</span>
+    <button className={btnClass} onClick={() => setIsActive(!isActive)} >
+      <img src={props.icon} alt="icon" />
+      {props.name}
     </button>
   )
 }
 
-export default index
+export default Index

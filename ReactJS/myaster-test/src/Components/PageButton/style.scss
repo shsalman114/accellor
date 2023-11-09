@@ -1,4 +1,5 @@
 @import "../../assets/sass/mixins";
+@import '../../assets/sass/variables';
 
 .page-button {
   @include flex(center, flex-start, 10px, row, nowrap);
@@ -7,18 +8,14 @@
   border: none;
   background: none;
   cursor: pointer;
+  color: $color-primary-blue;
+  font-size: 14px;
 
   &.active {
     border-radius: 10px;
-    background: #144D92;
+    background: $color-primary-blue;
+    color: white;
   }
 
-  span {
-    color: #144D92;
-    font-family: Mulish;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
+
 }

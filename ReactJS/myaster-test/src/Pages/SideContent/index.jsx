@@ -1,10 +1,12 @@
 import React from 'react';
 import TitleTab from '../../Components/TitleTab';
 import Logo from '../../assets/images/logo.svg';
-import PageButton from '../../Components/PageButton';
+import homeIcon from '../../assets/images/homeIcon.svg'
+
+import PageButton from '../../Components/PageButton/Index';
 import './styles.scss'
 
-const index = () => {
+const Index = () => {
   return (
     <div className='left-side-panel'>
       <div className='header'>
@@ -20,10 +22,13 @@ const index = () => {
         <div className="divider"></div>
         <TitleTab title={'E LAB'} />
         <div className="divider"></div>
-        <PageButton />
+        <PageButton name='Homepages' icon={homeIcon} />
+        <div className="divider"></div>
+        <PageButton name='Components' icon={homeIcon} />
+        <div className="divider"></div>
       </div>
     </div>
   )
 }
 
-export default index
+export default Index
