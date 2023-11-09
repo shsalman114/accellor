@@ -12,4 +12,20 @@
     border-radius: 10px;
     border: 2px solid $soft-bg;
   }
+
+  .box1 {
+    grid-row: span 3;
+    grid-column: span 1;
+  }
+
+  .box4 {
+    grid-row: span 3;
+    grid-column: span 1;
+  }
+
+  .box7 {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
 }
