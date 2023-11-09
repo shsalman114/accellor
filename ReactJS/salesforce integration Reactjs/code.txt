@@ -1,0 +1,303 @@
+///====================================.env
+loginUrl='https://platform-enterprise-9548-dev-ed.scratch.my.salesforce.com'
+callbackUrl='http://localhost:8080/auth/callback'
+consumerKey='3MVG9WiZ4_mwZLgcZpL8YyJN5RUWeEPu_zHZnD4hyrSf0sHEWB7gqKdW1o8piXkaqhgPRrv9qQbN1JhxJMuu8'
+consumerSecret='97067CB86176CEB54B0D6A34CFB1B7C4DC1961A61EA75B86A14E22620D0CDAEB'
+apiVersion='53.0'
+
+isHttps='false'
+sessionSecretKey='abc'
+
+///=====================================Query form
+
+import React from 'react';
+
+export default class QueryForm extends React.Component {
+  // state = {
+  //   query: 'SELECT Id, Accounts, Contacts FROM User LIMIT 5'
+  // };
+  
+  state = {
+    userValue : 'sample',
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const queryValue = this.state.userValue.trim();
+    const query = `select id, name, (select id, name from contacts) from account where Name like '${queryValue}%'`
+    if (!queryValue) {
+      return;
+    }
+    this.props.onExecuteQuery({ query });
+  };
+
+  handleQueryChange = (e) => {
+     this.setState({userValue: e.target.value});
+  };
+
+  render() {
+    return (
+      <form className="slds-form--stacked slds-m-bottom--xx-large" onSubmit={this.handleSubmit}>
+        <div className="slds-form-element">
+          <label className="slds-form-element__label slds-text-heading--medium" htmlFor="soqlQuery">
+            <abbr className="slds-required" title="required">
+              *
+            </abbr>
+            Query
+          </label>
+          <div className="slds-form-element__control">
+            <textarea id="soqlQuery" className="slds-textarea" placeholder="Enter a Account Name" value={this.state.userValue} onChange={this.handleQueryChange} required=""></textarea>
+          </div>
+        </div>
+
+        <div className="slds-form-element slds-clearfix">
+          <div className="slds-float--right">
+            <button className="slds-button slds-button--brand" type="submit" disabled={!this.state.userValue.trim()}>
+              <svg aria-hidden="true" className="slds-button__icon--stateful slds-button__icon--left">
+                <use xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+              </svg>
+              Execute
+            </button>
+          </div>
+        </div>
+      </form>
+    );
+  }
+}
+
+
+
+////===========================================  Query Result
+
+// import React from 'react';
+// import Accordion from '@salesforce/design-system-react/components/accordion';
+// import AccordionPanel from '@salesforce/design-system-react/components/accordion/panel';
+// import IconSettings from '@salesforce/design-system-react/components/icon-settings';
+// import Dropdown from '@salesforce/design-system-react/components/menu-dropdown';
+
+// export default class QueryResults extends React.Component {
+
+// 	constructor(props) {
+// 		super(props);
+//     const result = JSON.parse(this.props.result);
+// 		let dataValue = {};
+//     result.records.map((accountRecord) => {
+// 			dataValue["id"] = accountRecord.id;
+//       dataValue["accountName"] = accountRecord.Name;
+//       accountRecord.Contacts.records.map((contact) =>{
+// 				dataValue["contactName"] =contact.Name;
+// 			});
+// 		});
+
+// 		console.log('dataValue',dataValue);
+
+// 		this.state = {
+// 			expandedPanels: {},
+// 			items: dataValue,
+// 		};
+
+// 		console.log('this.state.items',this.state.items);
+// 	}
+
+// 	menuDropdown(selectedItem) {
+// 		return (
+// 			<Dropdown
+// 				align="right"
+// 				id={selectedItem.id}
+// 				assistiveText={{ icon: 'More Options' }}
+// 				buttonVariant="icon"
+// 				buttonClassName="slds-shrink-none"
+// 				iconCategory="utility"
+// 				iconName="down"
+// 				iconVariant="border-filled"
+// 				onSelect={(option) => {
+// 					if (option.label === 'delete') {
+// 						this.setState((state) => ({
+// 							...state,
+// 							items: state.items.filter((item) => item.id !== selectedItem.id),
+// 						}));
+// 					} else if (console) {
+// 						console.log('onSelect', event, option);
+// 					}
+// 				}}
+// 				options = {[
+// 					{
+// 						label: 'delete',
+// 						value: 'A0',
+// 					},
+// 					{
+// 						label: 'redo',
+// 						value: 'B0',
+// 					},
+// 					{
+// 						label: 'activate',
+// 						value: 'C0',
+// 					},
+// 				]}
+// 				iconSize="x-small"
+// 			/>
+// 		);
+// 	}
+
+// 	togglePanel(event, data) {
+// 		this.setState((state) => ({
+// 			...state,
+// 			expandedPanels: {
+// 				[data.id]: !state.expandedPanels[data.id],
+// 			},
+// 		}));
+// 		if (this.props.action) {
+// 			const dataAsArray = Object.keys(data).map((id) => data[id]);
+// 			this.props.action('onClick')(event, ...dataAsArray);
+// 		} else if (console) {
+// 			console.log('[onSelect] (event, data)', event, data);
+// 		}
+// 	}
+
+// 	render() {
+// 		return (
+// 			<IconSettings iconPath="/assets/icons">
+// 				<Accordion id="base-example-accordion">
+// 					{this.state.items.map((item, i) => {
+// 						return (
+// 							<AccordionPanel
+// 								expanded={!!this.state.expandedPanels[item.id]}
+// 								id={item.id}
+// 								panelContentActions={this.menuDropdown(item)}
+// 								key={item.id}
+// 								onTogglePanel={(event) => this.togglePanel(event, item)}
+// 								summary={item.accountName}
+// 							>
+// 								{item.contactName}
+// 							</AccordionPanel>
+// 						);
+// 					})}
+// 				</Accordion>
+// 			</IconSettings>
+// 		);
+// 	}
+// }
+
+import React from 'react';
+
+export default class QueryResults extends React.Component {
+
+  accountData = '';
+	contacts = '';
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      sectionsOpen: [], // Keeps track of which sections are open
+    };
+  }
+
+  handleMoreClick = (sectionIndex) => {
+    const { sectionsOpen } = this.state;
+    sectionsOpen[sectionIndex] = !sectionsOpen[sectionIndex];
+    this.setState({ sectionsOpen });
+  };
+
+  render() {
+    const result = JSON.parse(this.props.result);
+    console.log('props result', this.props.result);
+    console.log('JSONparse result', result);
+
+    // function handleMoreClick(event) {
+    //   const val = document.getElementsByClassName('slds-accordion__section');
+    //   console.log('val',val);
+
+    //   if(val[0].classList.contains('slds-is-open')){
+    //     console.log('if statement');
+    //     val[0].classList.remove('slds-is-open');
+    //   } else {
+    //     console.log('else statement');
+    //     val[0].classList.add('slds-is-open');
+    //   }
+    //   console.log('val',val.classList);
+    //   console.log(event);
+    //   console.log(event.target);
+    //   console.log(event.target.lastChild);
+    //   console.log(event.target.lastChild.classList);
+    // }
+
+    if (result.totalSize !== 0 ) {
+      this.accountData = result.records.map((accountRecord, index) => {
+        const isSectionOpen = this.state.sectionsOpen[index];
+        if (accountRecord.Contacts) {
+          this.contacts = accountRecord.Contacts.records.map((contact) => <li key={contact.id}>{contact.Name}</li>);
+        } else this.contacts = 'no contacts'
+        return (
+          <li className="slds-accordion__list-item" key={accountRecord.id}>
+            <section className={`slds-accordion__section ${
+                isSectionOpen ? 'slds-is-open' : ''
+              }`}>
+              <div className="slds-accordion__summary">
+                <h2 className="slds-accordion__summary-heading">
+                  <button className="slds-button slds-button_reset slds-accordion__summary-action" aria-controls={accountRecord.id} aria-expanded="true" title="Accordion summary" onClick={() => this.handleMoreClick(index)}>
+                    <svg className="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
+                      <img src="/assets/icons/utility-sprite/svg/symbols.svg#switch"></img>
+                    </svg>
+                    <span className="slds-accordion__summary-content">{accountRecord.Name}</span>
+                  </button>
+                </h2>
+              </div>
+              <div className="slds-accordion__content" id={accountRecord.id}>
+                <ul>{this.contacts}</ul>
+              </div>
+            </section>
+          </li>
+        );
+      });
+    } else this.accountData = 'No record found';
+
+    return <ul className="slds-accordion">{this.accountData}</ul>;
+  }
+}
+
+// <li key={accountRecord.id}>
+//   {accountName}
+//   <ul>{contacts}</ul>
+// </li>
+
+///////////////////////////////////////////////////////
+
+// import React from 'react';
+
+// export default class QueryResults extends React.Component {
+
+//   render() {
+
+//     const result = JSON.parse(this.props.result);
+//     console.log(typeof(result));
+
+//     const accountData = result.records.map(accountRecord => {
+//       const accountName = accountRecord.Name;
+//       const contacts = accountRecord.Contacts.records.map(contact => (
+//         <li key={contact.id}>{contact.Name}</li>
+//       ));
+
+//       return (
+//         <div key={accountRecord.id}>
+//           <ul style={{listStyleType: initial}}>
+//             <li key={`${accountRecord.id}-account`}>{accountName}</li>
+//             <ul style={{listStyleType: auto}}>
+//               {contacts}
+//             </ul>
+//           </ul>
+//         </div>
+//       );
+//     });
+
+//     console.log(accountData);
+
+//     return (
+
+//         <div>
+//         {accountData}
+//         <p>cahnge</p>
+//         </div>
+
+//     );
+//   }
+// }
