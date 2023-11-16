@@ -164,11 +164,11 @@
       </section>
       <!-- MODAL -->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg modal-sm">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
           <div class="modal-content">
             <div class="modal-body">
               <form class="form-section">
-                <div class="create-section d-flex flex-column align-items-start">
+                <div class="create-section d-flex flex-column align-items-start justify-content-between">
                   <div class="info-section">
                     <div class="title-page">
                       <h2 class="title">Create new RDX Fact Tag</h2>
@@ -178,20 +178,8 @@
                       <button class="side-link d-flex align-items-center active">
                         Details
                       </button>
-                      <button class="side-link d-flex align-items-center active">
-                        Details
-                      </button>
-                      <button class="side-link d-flex align-items-center active">
-                        Details
-                      </button>
-                      <button class="side-link d-flex align-items-center active">
-                        Details
-                      </button>
-                      <button class="side-link d-flex align-items-center active">
-                        Details
-                      </button>
-                      <button class="side-link d-flex align-items-center active">
-                        Details
+                      <button class="side-link d-flex align-items-center tab-hide">
+                        Specifications
                       </button>
                     </div>
                   </div>
@@ -217,49 +205,75 @@
                       <label class="" for="rac">Retail Access Code (RAC)</label>
                       <input type="text" id="rac" placeholder="Search or select RAC">
                       <div class="option-box">
-                        <input type="checkbox" name="" id="">Select all <span>6/10</span>
-                        <input type="checkbox" name="ContosoUS" id="">ContosoUS
-                        <input type="checkbox" name="Contoso" id="">Contoso
-                        <input type="checkbox" name="Conto" id="">Conto
-                        <input type="checkbox" name="ConUS" id="">ConUS
+                        <label for="selectall">
+                          <input type="checkbox" name="" id="selectall">Select all <span>6/10</span>
+                        </label>
+                        <div class="divider"></div>
+                        <label for="ContosoUS">
+                          <input type="checkbox" name="ContosoUS" id="ContosoUS">ContosoUS
+                        </label>
+                        <label for="Contoso">
+                          <input type="checkbox" name="Contoso" id="Contoso">Contoso
+                        </label>
+                        <label for="Conto">
+                          <input type="checkbox" name="Conto" id="Conto">Conto
+                        </label>
+                        <label for="ConUS">
+                          <input type="checkbox" name="ConUS" id="ConUS">ConUS
+                        </label>
                       </div>
                     </div>
                     <div class="store-info">
                       <label class="" for="rac">Store ID</label>
                       <div class="option-box">
-                        <input type="checkbox" name="" id="">Select all <span>6/10</span>
-                        <div class="divider">
-                          <input type="checkbox" name="ContosoUS" id="">ContosoUS <span>&ndash; Bellevue,
+                        <label for="selectall">
+                          <input type="checkbox" name="" id="selectall">Select all <span>6/10</span>
+                        </label>
+                        <div class="divider"></div>
+                        <label for="ContosoUS">
+                          <input type="checkbox" name="ContosoUS" id="ContosoUS">ContosoUS<span>&ndash; Bellevue,
                             Washington</span>
-                          <input type="checkbox" name="Contoso" id="">Contoso <span>&ndash; Bellevue, Washington</span>
-                          <input type="checkbox" name="Conto" id="">Conto <span>&ndash; Bellevue, Washington</span>
-                          <input type="checkbox" name="ConUS" id="">ConUS <span>&ndash; Bellevue, Washington</span>
-                        </div>
+                        </label>
+                        <label for="Contoso">
+                          <input type="checkbox" name="Contoso" id="Contoso">Contoso<span>&ndash; Bellevue,
+                            Washington</span>
+                        </label>
+                        <label for="Conto">
+                          <input type="checkbox" name="Conto" id="Conto">Conto<span>&ndash; Bellevue, Washington</span>
+                        </label>
+                        <label for="ConUS">
+                          <input type="checkbox" name="ConUS" id="ConUS">ConUS<span>&ndash; Bellevue, Washington</span>
+                        </label>
                       </div>
-                      <div class="region-info">
-                        <label class="" for="rac">Region</label>
-                        <input type="text" value="Search or select">
-                      </div>
-                      <div class="divider">
-                        <div class="data-info">
-                          <label for="">Data source <span>Select whether to automatically detect values from the device
-                              or pull data from an uploaded SKU list</span></label>
-                          <div class="data-btn">
-                            <input type="radio" name="source" id="auto">
-                            <input type="radio" name="source" id="custom">
-                          </div>
-                        </div>
+                    </div>
+                    <div class="region-info">
+                      <label class="" for="rac">Region</label>
+                      <input type="text" value="Search or select">
+                    </div>
+                    <div class="divider"></div>
+                    <div class="data-info">
+                      <label for="">Data source <span>Select whether to automatically detect values from the device
+                          or pull data from an uploaded SKU list</span></label>
+                      <div class="data-btn">
+                        <label for="auto">
+                          <input type="radio" name="source" id="auto">Detected values
+                        </label>
+                        <label for="custom">
+                          <input type="radio" name="source" id="custom">Custom
+                        </label>
                       </div>
                     </div>
                   </div>
                 </div>
-              </form>
             </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </div>
+  </div>
+  <script src="./assets/script/script.js"></script>
 </body>
 
 </html>

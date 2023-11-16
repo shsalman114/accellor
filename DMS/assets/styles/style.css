@@ -204,20 +204,16 @@ nav .dropdown-icon {
 
 .modal .form-section {
   display: flex;
-  height: 66%;
+  height: 634px;
   flex-shrink: 0;
   overflow: hidden;
 }
 
 .modal .create-section {
   max-width: 40%;
-  display: flex;
-  width: 330px;
+  width: 100%;
   padding: 30px 0px;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-shrink: 0;
+  flex-shrink: 1;
   align-self: stretch;
   background: #F0F0F0;
 }
@@ -261,11 +257,20 @@ nav .dropdown-icon {
 }
 
 .modal .tab-section .side-link {
+  color: #A19F9D;
   font-weight: 600;
   width: 100%;
-  padding: 10px 0px 10px 26px;
+  padding: 10px 0px 10px 30px;
   border: none;
   gap: 8px;
+}
+
+.modal .tab-section .side-link.tab-hide {
+  visibility: hidden;
+}
+
+.modal .tab-section .side-link.active {
+  padding: 10px 0px 10px 26px;
   opacity: 1;
   border-left: 3px solid #007EDF;
   color: #007EDF;
@@ -274,7 +279,7 @@ nav .dropdown-icon {
 .modal .save-section {
   margin-left: -16px;
   display: flex;
-  height: 50px;
+  /* height: 50px; */
   padding: 0px 30px;
   align-items: flex-end;
   gap: 4px;
@@ -389,7 +394,7 @@ nav .dropdown-icon {
   /* 142.857% */
 }
 
-.modal .detail-info .customer-info input {
+.modal .detail-info .customer-info input[type="text"] {
   display: flex;
   padding: 8px;
   flex-direction: column;
@@ -426,7 +431,7 @@ nav .dropdown-icon {
   /* 111.111% */
 }
 
-.modal .detail-info .brand-info input {
+.modal .detail-info .brand-info input[type="text"] {
   display: flex;
   padding: 8px;
   flex-direction: column;
@@ -462,7 +467,7 @@ nav .dropdown-icon {
   /* 111.111% */
 }
 
-.modal .detail-info .retail-info input {
+.modal .detail-info .retail-info input[type="text"] {
   display: flex;
   padding: 8px;
   flex-direction: column;
@@ -484,10 +489,185 @@ nav .dropdown-icon {
   /* 125% */
 }
 
-.modal .detail-info {}
+.modal .detail-info .retail-info .option-box {
+  display: flex;
+  padding: 14px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: var(--Small, 2px);
 
-.modal .detail-info {}
+  border: 1px solid var(--grey-palette-grey-110, #8A8886);
+  background: var(--grey-palette-white, #FFF);
+  gap: 13px;
+}
 
-.modal .detail-info {}
+.modal .detail-info .retail-info .option-box label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
-.modal .detail-info {}
+  color: var(--grey-palette-grey-190, #201F1E);
+
+  /* SegoeUI Regular / 16 - ms-fontSize-16 FontSizes.size16 */
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  /* 137.5% */
+}
+
+.modal .detail-info .retail-info .option-box input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.modal .detail-info .store-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
+}
+
+.modal .detail-info .store-info label {
+  color: var(--grey-palette-grey-190, #201F1E);
+  font-family: Segoe UI;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  /* 111.111% */
+}
+
+.modal .detail-info .store-info .option-box {
+  display: flex;
+  padding: 14px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: var(--Small, 2px);
+
+  border: 1px solid var(--grey-palette-grey-110, #8A8886);
+  background: var(--grey-palette-white, #FFF);
+  gap: 13px;
+}
+
+.modal .detail-info .store-info .option-box label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--grey-palette-grey-190, #201F1E);
+
+  /* SegoeUI Regular / 16 - ms-fontSize-16 FontSizes.size16 */
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  /* 137.5% */
+}
+
+.modal .detail-info .store-info .option-box input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.modal .detail-info .region-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Medium, 4px);
+  align-self: stretch;
+}
+
+.modal .detail-info .region-info label {
+  display: flex;
+  padding: 5px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--Small, 2px);
+  align-self: stretch;
+
+  color: var(--grey-palette-grey-190, #201F1E);
+  font-family: Segoe UI;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  /* 111.111% */
+}
+
+.modal .detail-info .region-info input {
+  display: flex;
+  padding: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.modal .detail-info .data-info {
+  display: flex;
+  width: 430px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.modal .detail-info .data-info>label {
+  display: flex;
+  padding: 5px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--Small, 2px);
+  align-self: stretch;
+
+  color: var(--grey-palette-grey-190, #201F1E);
+  font-family: Segoe UI;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  /* 111.111% */
+}
+
+.modal .detail-info .data-info>label span {
+  color: var(--grey-palette-grey-130, #605E5C);
+  font-family: Segoe UI;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 142.857% */
+}
+
+.modal .detail-info .data-info .data-btn {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.modal .detail-info .data-info .data-btn>label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  color: var(--grey-palette-grey-190, #201F1E);
+
+  /* SegoeUI Regular / 16 - ms-fontSize-16 FontSizes.size16 */
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  /* 137.5% */
+}
+
+.modal .detail-info .data-info .data-btn input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
