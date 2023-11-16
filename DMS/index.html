@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/styles/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <title>DMS - Demo Management System</title>
+</head>
+
+<body>
+  <div class="d-flex flex-column">
+
+    <!-- NAVBAR -->
+    <nav class="d-flex justify-content-between">
+      <div class="page-title d-flex align-items-center">
+        <div class="logo">
+          <img src="./assets/images/logo.svg" alt="">
+        </div>
+        <div class="divider"></div>
+        <span class="title">Demo Management System</span>
+      </div>
+      <div class="nav-link d-flex align-items-center">
+        <div class="help d-flex align-items-center">
+          <span class="feedback">Submit Feedback</span>
+          <button class="help-icon">
+            <img src="./assets/images/help-icon.svg" alt="">
+          </button>
+        </div>
+        <div class="divider"></div>
+        <div class="user-info d-flex align-items-center">
+          <div class="avatar">
+            <img src="./assets/images/avatar.svg" alt="">
+          </div>
+          <div class="user-control d-flex align-items-center">
+            <div class="name-plaque d-flex flex-column align-items-start">
+              <span>Evelyn Humphries</span>
+              <span>Multiple Partners</span>
+            </div>
+            <div class="dropdown-icon d-flex">
+              <img src="./assets/images/dropdown.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="d-flex">
+      <!-- LEFT MENU -->
+      <section class="left-section d-inline-flex flex-column align-items-center flex-shrink-0">
+        <button class="side-link d-flex align-items-center ">
+          <div class="icon d-flex">
+            <img src="./assets/images/folder.svg" alt="">
+          </div>
+          <span class="link-name">Overview</span>
+        </button>
+        <button class="side-link d-flex align-items-center">
+          <div class="icon d-flex">
+            <img src="./assets/images/folder.svg" alt="">
+          </div>
+          <span class="link-name">Projects</span>
+        </button>
+        <button class="side-link d-flex align-items-center">
+          <div class="icon d-flex">
+            <img src="./assets/images/play.svg" alt="">
+          </div>
+          <span class="link-name">Attract Loop</span>
+        </button>
+        <button class="side-link d-flex align-items-center active">
+          <div class="icon d-flex">
+            <img src="./assets/images/tag.svg" alt="">
+          </div>
+          <span class="link-name">RDX Fact Tag</span>
+        </button>
+        <button class="side-link d-flex align-items-center">
+          <div class="icon d-flex">
+            <img src="./assets/images/upload.svg" alt="">
+          </div>
+          <span class="link-name">File Upload</span>
+        </button>
+      </section>
+      <!-- MAIN CONTENT -->
+      <section class="content">
+        <div class="heading d-flex flex-column align-items-start">
+          <span class="title">RDX Fact Tag</span>
+        </div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn d-flex c-btn-comp align-items-center" data-bs-toggle="modal"
+          data-bs-target="#exampleModal">
+          <span class="icons d-flex">
+            <img src="./assets/images/plus.svg" alt="">
+          </span>
+          <span class="name">Create new RDX Fact Tag</span>
+        </button>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="col-3">Name</th>
+                <th class="col-3">RAC</th>
+                <th class="col-3">Store ID</th>
+                <th class="col-3">Last Updated</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>DFT</td>
+                <td>ContosoDemo</td>
+                <td>10001, 10005</td>
+                <td><span>18 Apr 2023, 09:09:41</span><img src="./assets/images/options-icon.svg" alt="">
+                </td>
+              </tr>
+              <tr>
+                <td>DFT</td>
+                <td>ContosoDemo</td>
+                <td>10001, 10005</td>
+                <td><span>18 Apr 2023, 09:09:41</span><img src="./assets/images/options-icon.svg" alt="">
+                </td>
+              </tr>
+              <tr>
+                <td>DFT</td>
+                <td>ContosoDemo</td>
+                <td>10001, 10005</td>
+                <td><span>18 Apr 2023, 09:09:41</span><img src="./assets/images/options-icon.svg" alt="">
+                </td>
+              </tr>
+              <tr>
+                <td>DFT</td>
+                <td>ContosoDemo</td>
+                <td>10001, 10005</td>
+                <td><span>18 Apr 2023, 09:09:41</span><img src="./assets/images/options-icon.svg" alt="">
+                </td>
+              </tr>
+              <tr>
+                <td>DFT</td>
+                <td>ContosoDemo</td>
+                <td>10001, 10005</td>
+                <td><span>18 Apr 2023, 09:09:41</span><img src="./assets/images/options-icon.svg" alt="">
+                </td>
+              </tr>
+              <tr>
+                <td>DFT</td>
+                <td>ContosoDemo</td>
+                <td>10001, 10005</td>
+                <td><span>18 Apr 2023, 09:09:41</span><img src="./assets/images/options-icon.svg" alt="">
+                </td>
+              </tr>
+              <tr>
+                <td>DFT</td>
+                <td>ContosoDemo</td>
+                <td>10001, 10005</td>
+                <td><span>18 Apr 2023, 09:09:41</span><img src="./assets/images/options-icon.svg" alt="">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!-- MODAL -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg modal-sm">
+          <div class="modal-content">
+            <div class="modal-body">
+              <form class="form-section">
+                <div class="create-section d-flex flex-column align-items-start">
+                  <div class="info-section">
+                    <div class="title-page">
+                      <h2 class="title">Create new RDX Fact Tag</h2>
+                      <p class="description">Enter a name for your Fact Tag and configure your details.</p>
+                    </div>
+                    <div class="tab-section">
+                      <button class="side-link d-flex align-items-center active">
+                        Details
+                      </button>
+                      <button class="side-link d-flex align-items-center active">
+                        Details
+                      </button>
+                      <button class="side-link d-flex align-items-center active">
+                        Details
+                      </button>
+                      <button class="side-link d-flex align-items-center active">
+                        Details
+                      </button>
+                      <button class="side-link d-flex align-items-center active">
+                        Details
+                      </button>
+                      <button class="side-link d-flex align-items-center active">
+                        Details
+                      </button>
+                    </div>
+                  </div>
+                  <div class="save-section">
+                    <button type="Submit" class="btn create-btn">Create</button>
+                    <button type="Cancel" class="btn cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                  </div>
+                </div>
+                <div class="detail-section">
+                  <div class="detail-info">
+                    <span>Details</span>
+                    <div class="divider"></div>
+                    <div class="customer-info">
+                      <label for="name">Name <span>This is only visible in the file lists and will not be seen by
+                          customers</span></label>
+                      <input type="text" id="name" value="retailer.skulist">
+                    </div>
+                    <div class="brand-info">
+                      <label for="brand">Brand</label>
+                      <input type="text" id="brand" value="Contoso">
+                    </div>
+                    <div class="retail-info">
+                      <label class="" for="rac">Retail Access Code (RAC)</label>
+                      <input type="text" id="rac" placeholder="Search or select RAC">
+                      <div class="option-box">
+                        <input type="checkbox" name="" id="">Select all <span>6/10</span>
+                        <input type="checkbox" name="ContosoUS" id="">ContosoUS
+                        <input type="checkbox" name="Contoso" id="">Contoso
+                        <input type="checkbox" name="Conto" id="">Conto
+                        <input type="checkbox" name="ConUS" id="">ConUS
+                      </div>
+                    </div>
+                    <div class="store-info">
+                      <label class="" for="rac">Store ID</label>
+                      <div class="option-box">
+                        <input type="checkbox" name="" id="">Select all <span>6/10</span>
+                        <div class="divider">
+                          <input type="checkbox" name="ContosoUS" id="">ContosoUS <span>&ndash; Bellevue,
+                            Washington</span>
+                          <input type="checkbox" name="Contoso" id="">Contoso <span>&ndash; Bellevue, Washington</span>
+                          <input type="checkbox" name="Conto" id="">Conto <span>&ndash; Bellevue, Washington</span>
+                          <input type="checkbox" name="ConUS" id="">ConUS <span>&ndash; Bellevue, Washington</span>
+                        </div>
+                      </div>
+                      <div class="region-info">
+                        <label class="" for="rac">Region</label>
+                        <input type="text" value="Search or select">
+                      </div>
+                      <div class="divider">
+                        <div class="data-info">
+                          <label for="">Data source <span>Select whether to automatically detect values from the device
+                              or pull data from an uploaded SKU list</span></label>
+                          <div class="data-btn">
+                            <input type="radio" name="source" id="auto">
+                            <input type="radio" name="source" id="custom">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
