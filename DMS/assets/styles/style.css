@@ -257,6 +257,7 @@ nav .dropdown-icon {
 }
 
 .modal .tab-section .side-link {
+
   color: #A19F9D;
   font-weight: 600;
   width: 100%;
@@ -265,15 +266,15 @@ nav .dropdown-icon {
   gap: 8px;
 }
 
-.modal .tab-section .side-link.tab-hide {
-  visibility: hidden;
-}
-
 .modal .tab-section .side-link.active {
   padding: 10px 0px 10px 26px;
   opacity: 1;
   border-left: 3px solid #007EDF;
   color: #007EDF;
+}
+
+.modal .tab-section .side-link.hide {
+  display: none;
 }
 
 .modal .save-section {

@@ -175,10 +175,10 @@
                       <p class="description">Enter a name for your Fact Tag and configure your details.</p>
                     </div>
                     <div class="tab-section">
-                      <button class="side-link d-flex align-items-center active">
+                      <button id="details" type="button" class="side-link tab-link d-flex align-items-center active">
                         Details
                       </button>
-                      <button class="side-link d-flex align-items-center tab-hide">
+                      <button id="spec" type="button" class="side-link tab-link text-start align-items-center hide">
                         Specifications
                       </button>
                     </div>
@@ -256,7 +256,7 @@
                           or pull data from an uploaded SKU list</span></label>
                       <div class="data-btn">
                         <label for="auto">
-                          <input type="radio" name="source" id="auto">Detected values
+                          <input type="radio" name="source" id="auto" checked>Detected values
                         </label>
                         <label for="custom">
                           <input type="radio" name="source" id="custom">Custom
