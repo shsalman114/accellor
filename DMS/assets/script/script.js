@@ -34,7 +34,7 @@ function handleRetailCheckBox() {
   })
   $('.retail-checkbox').each(index => {
     if ($('.retail-checkbox')[index].checked && $('.retail-checkbox').length !== checkedCount) {
-      $('#retail-selectall').css('background-image', 'url("/assets/images/halfCheckboxFill.svg")');
+      $('#retail-selectall').css('background-image', 'url("./assets/images/halfCheckboxFill.svg")');
       $('#retail-selectall')[0].checked = true;
     }
     if ($('.retail-checkbox')[index].checked && $('.retail-checkbox').length === checkedCount) {
