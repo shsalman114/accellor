@@ -11,50 +11,52 @@ import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import Menu from './components/menu/Menu';
 import Login from './pages/login/Login';
+import MouseContainer from './rough/MouseContainer';
 
 const App = () => {
 
   const Layout = () => {
-    return(
+    return (
       <div className='main'>
-        <Navbar/>
+        <Navbar />
         <div className='container'>
+          <MouseContainer />
           <div className='menuContainer'>
-            <Menu/>
+            <Menu />
           </div>
           <div className='contentContainer'>
-            <Outlet/>
+            <Outlet />
           </div>
         </div>
-        <Footer/>
-      </div>  
+        <Footer />
+      </div>
     )
   }
   const router = createBrowserRouter([
     {
-      path:'/',
-      element:<Layout/>,
-      children:[
+      path: '/',
+      element: <Layout />,
+      children: [
         {
-          path:'/',
-          element: <Home/>
+          path: '/',
+          element: <Home />
         },
         {
-          path:'/users',
-          element: <Users/>
+          path: '/users',
+          element: <Users />
         },
         {
-          path:'/products',
-          element: <Products/>
+          path: '/products',
+          element: <Products />
         },
       ]
     },
     {
       path: 'login',
-      element: <Login/>
+      element: <Login />
     }
   ]);
-  return (  <RouterProvider router={router}/>  )
+  return (<RouterProvider router={router} />)
 }
 
 export default App
