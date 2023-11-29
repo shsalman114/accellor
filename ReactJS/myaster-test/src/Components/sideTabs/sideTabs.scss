@@ -1,0 +1,34 @@
+@import '../../assets/sass/variables';
+
+.side-tabs {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 19px;
+  width: 100%;
+
+  .links {
+    color: $color-primary-blue;
+
+    svg {
+      fill: #144D92;
+    }
+
+    &.active {
+      border-radius: 10px;
+      background: $color-primary-blue;
+      color: white;
+
+      svg {
+        fill: #fff;
+      }
+
+    }
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: #D8D8D8;
+  }
+}

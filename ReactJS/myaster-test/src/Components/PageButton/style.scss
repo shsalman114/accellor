@@ -3,19 +3,11 @@
 
 .page-button {
   @include flex(center, flex-start, 10px, row, nowrap);
-  width: 230px;
   padding: 10px 20px 10px 15px;
+  width: 100%;
   border: none;
   background: none;
   cursor: pointer;
-  color: $color-primary-blue;
+  color: inherit;
   font-size: 14px;
-
-  &.active {
-    border-radius: 10px;
-    background: $color-primary-blue;
-    color: white;
-  }
-
-
 }

@@ -1,9 +1,14 @@
 import React from 'react'
-
-const Home = () => {
+import './mainContent.scss';
+import ActionBar from '../../Components/actionBar/ActionBar'
+import SectionTabs from '../../Components/sectionTabs/SectionTabs';
+const MainContent = () => {
   return (
-    <div>Home</div>
+    <div className='main-content'>
+      <ActionBar />
+      <SectionTabs />
+    </div>
   )
 }
 
-export default Home
+export default MainContent

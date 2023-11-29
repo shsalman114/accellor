@@ -1,10 +1,9 @@
-import React from 'react';
 import TitleTab from '../../Components/TitleTab';
+import SettingsTab from '../../Components/settingsTab/SettingsTab';
+import SideTabs from '../../Components/sideTabs/SideTabs';
 import Logo from '../../assets/images/logo.svg';
-import homeIcon from '../../assets/images/homeIcon.svg'
+import './styles.scss';
 
-import PageButton from '../../Components/PageButton/Index';
-import './styles.scss'
 
 const Index = () => {
   return (
@@ -14,18 +13,16 @@ const Index = () => {
       </div>
       <div className='menu-panel'>
         <p className='menu-title'>super admin</p>
-        <TitleTab title={'Teleconsultation'} />
+        <TitleTab title='Teleconsultation' />
         <div className="divider"></div>
-        <TitleTab title={'Homecare'} />
+        <TitleTab title='Homecare' />
         <div className="divider"></div>
-        <TitleTab title={'Pharmacy'} />
+        <TitleTab title='Pharmacy' />
         <div className="divider"></div>
-        <TitleTab title={'E LAB'} />
+        <TitleTab title='E LAB' />
         <div className="divider"></div>
-        <PageButton name='Homepages' icon={homeIcon} />
-        <div className="divider"></div>
-        <PageButton name='Components' icon={homeIcon} />
-        <div className="divider"></div>
+        <SideTabs />
+        <SettingsTab />
       </div>
     </div>
   )

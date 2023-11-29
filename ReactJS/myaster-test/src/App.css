@@ -8,3 +8,17 @@
   font-weight: 400;
   line-height: normal;
 }
+
+html,
+body {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.layout {
+  display: flex;
+  max-height: 100vh;
+}

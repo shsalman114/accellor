@@ -1,9 +1,13 @@
 @use "sass:math";
+@import "../../assets/sass/mixins";
 @import '../../assets/sass/variables';
 
 .left-side-panel {
   width: 21.4%; // Adjust the width to be responsive to the viewport width
   // other styles
+  background: #FBFDFF;
+  min-height: 100vh;
+  overflow-y: auto;
 
   .header {
     display: flex;
