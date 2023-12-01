@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 const SectionTabs = () => {
 
-  r
+
   // Extract all statuses from the array
   const allStatuses = sectionTabsData.flatMap(item => item.statuses.map(status => status.status));
 
