@@ -12,19 +12,19 @@ const SideTabs = () => {
       id: uuidv4(),
       name: 'Homepages',
       icon: <IconHome />,
-      url: '/home',
+      url: '/s#',
     },
     {
       id: uuidv4(),
       name: 'Components',
       icon: <IconComponent />,
-      url: '/c',
+      url: '#',
     },
     {
       id: uuidv4(),
       name: 'Media Library',
       icon: <IconMedia />,
-      url: '/media',
+      url: '/w#',
     },
   ]
   return (

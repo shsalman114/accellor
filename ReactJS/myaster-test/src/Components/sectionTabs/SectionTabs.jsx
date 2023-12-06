@@ -2,6 +2,7 @@ import './sectionTabs.scss'
 import { sectionTabsData } from '../../data'
 import { NavLink } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import ListSet from '../listSet/ListSet';
 
 
 const SectionTabs = () => {
@@ -51,7 +52,9 @@ const SectionTabs = () => {
           </NavLink>
         ))}
       </div>
-      <div className="filter-section"></div>
+      <div className="filter-section">
+        <ListSet data={sectionTabsData} />
+      </div>
     </div>
   )
 }

@@ -7,6 +7,7 @@ const MainContent = () => {
     <div className='main-content'>
       <ActionBar />
       <SectionTabs />
+      
     </div>
   )
 }
