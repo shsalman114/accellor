@@ -1,35 +1,73 @@
-import { List } from '@mui/icons-material'
-import { Avatar, Box, IconButton, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material'
+
+import { Avatar, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material'
 import './listSet.scss'
-import { useState } from 'react';
 import React from 'react';
 const ListSet = ({ data }) => {
-  const [dense, setDense] = useState(false);
-  const [secondary, setSecondary] = useState(false);
-
   return (
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-      <ListItem alignItems="flex-start">
-        <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-        </ListItemAvatar>
-        <ListItemText
-          primary="Brunch this weekend?"
-          secondary={
-            <React.Fragment>
-              <Typography
-                sx={{ display: 'inline' }}
-                component="span"
-                variant="body2"
-                color="text.primary"
-              >
-                Ali Connors
-              </Typography>
-              {" — I'll be in your neighborhood doing errands this…"}
-            </React.Fragment>
-          }
-        />
-      </ListItem>
+    <List className='c-listSet'>
+      {data.map(item => (
+        <ListItem alignItems="flex-start" sx={{ pt: '-14px', pb: '10px' }} key={item.id}>
+          <ListItemAvatar>
+            <Avatar sx={{ bgcolor: '#F8F9FA', width: 40, height: 40, color: '#144D92', fontSize: '14px', fontWeight: 600, fontFamily: 'Mulish' }}>{item.type.split(/\s/).reduce((response, word) => response += word.slice(0, 1), '')}</Avatar>
+          </ListItemAvatar>
+          <ListItemText
+            primary={item.title}
+            secondary={
+              <React.Fragment>
+                <Typography
+                  component="span"
+                  variant="body2"
+                  color="text.primary"
+                  style={{ fontWeight: 600, fontFamily: 'Mulish' }}
+                >
+                  Rejected on:
+                </Typography>
+                <Typography
+                  component="span"
+                  variant="body2"
+                  color="text.primary"
+                  style={{ fontWeight: 400, marginLeft: 3, fontFamily: 'Mulish' }}
+                >
+                  {item.rejected_on}
+                </Typography>
+                <Typography
+                  component="span"
+                  variant="body2"
+                  color="text.primary"
+                  style={{ fontWeight: 600, marginLeft: 12, fontFamily: 'Mulish' }}
+                >
+                  Rejected by:
+                </Typography>
+                <Typography
+                  component="span"
+                  variant="body2"
+                  color="text.primary"
+                  style={{ fontWeight: 400, marginLeft: 3, fontFamily: 'Mulish' }}
+                >
+                  {item.rejected_by}
+                </Typography>
+                <Typography
+                  component="span"
+                  variant="body2"
+                  color="text.primary"
+                  style={{ fontWeight: 600, marginLeft: 12, fontFamily: 'Mulish' }}
+                >
+                  Component type:
+                </Typography>
+                <Typography
+                  component="span"
+                  variant="body2"
+                  color="text.primary"
+                  style={{ fontWeight: 400, marginLeft: 3, fontFamily: 'Mulish' }}
+                >
+                  {item.type}
+                </Typography>
+              </React.Fragment>
+            }
+          />
+        </ListItem>
+      ))
+      }
     </List>
   )
 }
