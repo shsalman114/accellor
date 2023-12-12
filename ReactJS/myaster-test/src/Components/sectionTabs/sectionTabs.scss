@@ -22,13 +22,22 @@
         justify-content: center;
         flex-direction: column;
 
+        .icon {
+
+          // svg {
+          fill: #78909C;
+          // }
+        }
+
         .name {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
           text-transform: capitalize;
+          color: rgba(3, 26, 50, 0.80);
 
           .entries {
+            color: #78909C;
             display: flex;
             gap: 10px;
             text-transform: lowercase;

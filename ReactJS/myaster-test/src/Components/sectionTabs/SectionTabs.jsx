@@ -1,12 +1,10 @@
 import './sectionTabs.scss'
 import { sectionTabsData } from '../../data'
-import { NavLink } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import ListSet from '../listSet/ListSet';
 import { useState } from 'react';
-import { styled } from '@mui/system';
 import FilterMenu from '../filterMenu/FilterMenu';
-import { Button, ButtonGroup, Pagination } from '@mui/material';
+import { Pagination, ToggleButton, ToggleButtonGroup } from '@mui/material';
 import { ReactComponent as Draft } from '../../assets/images/list-icons/draft.svg';
 import { ReactComponent as Page } from '../../assets/images/list-icons/page.svg';
 import { ReactComponent as Published } from '../../assets/images/list-icons/published.svg';
@@ -46,6 +44,7 @@ const SectionTabs = () => {
 
 
   console.log(tabsStatusArray)
+
   const addUrlProperty = (item) => {
     switch (item.name) {
       case 'draft':
@@ -70,7 +69,6 @@ const SectionTabs = () => {
   };
 
   const newData = tabsStatusArray.map(addUrlProperty);
-  console.log(newData)
 
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -86,22 +84,22 @@ const SectionTabs = () => {
     setCurrentPage(number);
   }
 
-  const useStyles = styled(() => ({
-    ul: {
-      "& .MuiPaginationItem-root": {
-        color: "#144D92"
-      }
+  const [formats, setFormats] = useState(['all components']);
+
+  const handleFormatChange = (event, updatedFormats) => {
+    console.log(updatedFormats)
+    if (updatedFormats !== null) {
+      setFormats(updatedFormats);
     }
-  }));
-  const classes = useStyles();
+  }
+
   return (
     <div className='sectionTabs'>
       <div className="tabs">
         <div className="tabs-menu">
-          <ButtonGroup>
-
+          <ToggleButtonGroup sx={{ display: 'flex', gap: '30px' }} exclusive value={formats} onChange={handleFormatChange} aria-label="Platform" >
             {newData.map(item => (
-              <Button variant='text' className="item" key={item.id}>
+              <ToggleButton variant='text' value={item.name} sx={{ px: 0, py: 0, border: 'none', bgcolor: 'transparent', '&.item': { bgcolor: 'transparent' } }} className="item" key={item.id} disableRipple={true}>
                 <div className="icon">
                   {item.url}
                 </div>
@@ -109,10 +107,10 @@ const SectionTabs = () => {
                   {item.name}
                   <span className='entries'>{item.count}<span>entries</span></span>
                 </span>
-                <div className="liner"></div>
-              </Button>
+                <div className="liner" style={{ width: '100%', height: '2px', backgroundColor: item.name === formats ? '#144D92' : 'none' }}></div>
+              </ToggleButton>
             ))}
-          </ButtonGroup>
+          </ToggleButtonGroup>
         </div>
         <FilterMenu />
       </div>

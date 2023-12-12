@@ -6,7 +6,7 @@ const ListSet = ({ data }) => {
   return (
     <List className='c-listSet'>
       {data.map(item => (
-        <ListItem alignItems="flex-start" sx={{ pt: '-14px', pb: '10px' }} key={item.id}>
+        <ListItem alignItems="flex-start" sx={{ mt: '-14px', pb: '10px' }} key={item.id}>
           <ListItemAvatar>
             <Avatar sx={{ bgcolor: '#F8F9FA', width: 40, height: 40, color: '#144D92', fontSize: '14px', fontWeight: 600, fontFamily: 'Mulish' }}>{item.type.split(/\s/).reduce((response, word) => response += word.slice(0, 1), '')}</Avatar>
           </ListItemAvatar>
