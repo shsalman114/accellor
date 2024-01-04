@@ -11,7 +11,6 @@ import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import Menu from './components/menu/Menu';
 import Login from './pages/login/Login';
-import MouseContainer from './rough/MouseContainer';
 
 const App = () => {
 
@@ -20,7 +19,6 @@ const App = () => {
       <div className='main'>
         <Navbar />
         <div className='container'>
-          <MouseContainer />
           <div className='menuContainer'>
             <Menu />
           </div>
